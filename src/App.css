@@ -1,0 +1,265 @@
+/* Set up basic styles for the app */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style the login form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #008080;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.login-form button:hover {
+  background-color: #006666;
+}
+
+/* Style the todo list */
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+li span {
+  font-size: 20px;
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+li.done span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+li button {
+  padding: 5px 10px;
+  background-color: #ff6961;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+li button:hover {
+  background-color: #d13f30;
+}
+
+.create-todo-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.create-todo-form input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  flex-grow: 1;
+  margin-right: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.create-todo-form button[type="submit"] {
+  padding: 10px;
+  background-color: #008080;
+  color: #fff;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+}
+
+.create-todo-form button[type="submit"]:hover {
+background-color: #006666;
+}
+
+/* Style the modal for updating a todo */
+.modal {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+.modal-content {
+background-color: #fff;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+max-width: 500px;
+width: 100%;
+max-height: 80vh;
+overflow-y: auto;
+}
+
+.modal-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+
+.modal-header h2 {
+font-size: 24px;
+}
+
+.modal-close {
+padding: 5px;
+border: none;
+background-color: transparent;
+cursor: pointer;
+}
+
+.modal-body {
+margin-bottom: 20px;
+}
+
+.modal-body label {
+display: block;
+margin-bottom: 10px;
+font-size: 16px;
+}
+
+.modal-body input[type="text"] {
+padding: 10px;
+border-radius: 5px;
+border: none;
+font-size: 16px;
+width: 100%;
+margin-bottom: 10px;
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-body textarea {
+padding: 10px;
+border-radius: 5px;
+border: none;
+font-size: 16px;
+width: 100%;
+margin-bottom: 10px;
+resize: none;
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-footer {
+display: flex;
+justify-content: flex-end;
+}
+
+.modal-footer button[type="submit"] {
+padding: 10px;
+background-color: #008080;
+color: #fff;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+}
+
+.modal-footer button[type="submit"]:hover {
+background-color: #006666;
+}
+
+/* Add animation for showing/hiding the modal */
+@keyframes fadeIn {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+.fade-in {
+animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeOut {
+from {
+opacity: 1;
+}
+to {
+opacity: 0;
+}
+}
+
+.fade-out {
+animation: fadeOut 0.3s ease-in-out;
+animation-fill-mode: forwards;
+}
+ 
