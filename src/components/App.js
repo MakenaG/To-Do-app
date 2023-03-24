@@ -21,6 +21,16 @@ function App() {
     setTodos([...todos, { ...todo, id: Date.now() }]);
   };
 
+  const editTodo = (id, text) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, text };
+      }
+      return todo;
+    });
+    setTodos(updatedTodos);
+  };
+
   const updateTodo = (id) => {
     const updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
@@ -36,20 +46,19 @@ function App() {
     setTodos(updatedTodos);
   };
   
-    
-    if (!user) {
+  if (!user) {
     return <Login handleLogin={handleLogin} />;
-    }
+  }
     
-    return (
+  return (
     <div>
-      <header>TO-DO APP</header>
-    <h1>Welcome, {user.username}!</h1>
-    <button onClick={handleLogout}>Log Out</button>
-    <CreateTodoForm createTodo={createTodo} />
-    <TodoList todos={todos} deleteTodo={deleteTodo} updateTodo={updateTodo} />
+      <h1>Welcome, {user.username}!</h1>
+      <button onClick={handleLogout}>Log Out</button>
+      <header>To Do List</header>
+      <CreateTodoForm createTodo={createTodo} />
+      <TodoList todos={todos} deleteTodo={deleteTodo} updateTodo={updateTodo} editTodo={editTodo} />
     </div>
-    );
-    }
-    
-    export default App;
+  );
+}
+
+export default App;
