@@ -5,7 +5,7 @@ body {
   padding: 0;
   background-color: #f2f2f2;
 }
-  header {
+  .header {
     background-color: #008080;
     color: #ad2828;
     font-size: 30px;
@@ -15,12 +15,12 @@ body {
     text-align: center;
   }
 
-  header h1 {
+  .header h1 {
     font-size: 36px;
     margin: 0;
   }
 
-  header button:hover {
+  .header button:hover {
     background-color: #008080;
     color: #fff;
   }
@@ -41,9 +41,19 @@ body {
     padding: 30px;
   }
 
-  form h2 {
-    font-size: 24px;
+  .h2 {
+    font-size: 34px;
     margin-bottom: 20px;
+    
+  }
+
+  .title {
+    font-size: 54px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #0fc63d;
+    text-align: center;
+    animation: alternate-reverse;
   }
 
   form label {
@@ -61,7 +71,7 @@ body {
     margin-bottom: 20px;
   }
   
- form button[type="submit"] {
+ .form button[type="submit"] {
     padding: 10px;
     background-color: #008080;
     color: #fff;
@@ -71,7 +81,7 @@ body {
     transition: all 0.3s ease-in-out;
   }
   
-  form button[type="submit"]:hover {
+  .form button[type="submit"]:hover {
     background-color: #006666;
   }
   
@@ -102,7 +112,7 @@ body {
   
   input[type="checkbox"] {margin-right:.5rem}
   
-  button {padding:.5rem;background-color:#f44336;color:#fff;border:none;border-radius:.5rem;cursor:pointer;transition:.3s ease-in-out}
+  button {padding:.5rem;background-color:#36f47c;color:#fff;border:none;border-radius:.5rem;cursor:pointer;transition:.3s ease-in-out}
   
   button:hover {background-color:#d32f2f}
   
