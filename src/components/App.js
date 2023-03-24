@@ -7,7 +7,11 @@ import './styles.css';
 
 function App() {
   const [user, setUser] = useState(null);
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([
+    { id: 1, text: "Go Clubbing", completed: false },
+    { id: 2, text: "Visit my Dad", completed: true },
+    { id: 3, text: "Go to the Gym", completed: false },
+  ]);
 
   const handleLogin = (credentials) => {
     setUser(credentials);
