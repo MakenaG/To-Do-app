@@ -58,7 +58,7 @@ function App() {
     <div>
       <h1>Welcome, {user.username}!</h1>
       <button onClick={handleLogout}>Log Out</button>
-      <header>To Do List</header>
+      {/* <header>To Do List</header> */}
       <CreateTodoForm createTodo={createTodo} />
       <TodoList todos={todos} deleteTodo={deleteTodo} updateTodo={updateTodo} editTodo={editTodo} />
     </div>
