@@ -43,6 +43,7 @@ function App() {
     
     return (
     <div>
+      <header>TO-DO APP</header>
     <h1>Welcome, {user.username}!</h1>
     <button onClick={handleLogout}>Log Out</button>
     <CreateTodoForm createTodo={createTodo} />

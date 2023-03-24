@@ -1,15 +1,28 @@
-/* Set up basic styles for the app */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+  header {
+    background-color: #008080;
+    color: #ad2828;
+    font-size: 30px;
+    display: flex;
+    justify-content:center;
+    padding: 20px;
+    text-align: center;
   }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
+
+  header h1 {
+    font-size: 36px;
     margin: 0;
-    padding: 0;
+  }
+
+  header button:hover {
+    background-color: #008080;
+    color: #fff;
   }
   
   .container {
@@ -20,16 +33,27 @@
   
   /* Style the login form */
   form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+    width: 400px;
     background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    padding: 30px;
   }
-  .login-form input[type="text"],
-  .login-form input[type="password"] {
+
+  form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  form label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  form input[type="text"],
+  form input[type="password"] {
     width: 100%;
     padding: 10px;
     border: none;
@@ -37,7 +61,7 @@
     margin-bottom: 20px;
   }
   
-  .login-form button[type="submit"] {
+ form button[type="submit"] {
     padding: 10px;
     background-color: #008080;
     color: #fff;
@@ -48,13 +72,15 @@
   }
   
   form button[type="submit"]:hover {
-      background-color:#357a38
+    background-color: #006666;
   }
+  
   
   /* Style the todo list */
   ul {
-      list-style:none; 
-      margin-bottom:20px
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
   
   li {
@@ -77,37 +103,69 @@
   
   button:hover {background-color:#d32f2f}
   
-  /* Style the create todo form */
   .create-todo-form {
-     display:flex;flex-direction:
-     column;margin-bottom:
-     20px;background-color:
-     #fff;padding:
-     20px;border-radius:
-     10px;box-shadow:
-     inset -1em -1em .5em rgba(255,255,255,.1),inset .5em .5em .5em rgba(0,0,0,.1),.5em .5em .5em rgba(0,0,0,.3)
+    display: flex;
+    margin-bottom: 20px;
   }
   
   .create-todo-form input[type="text"] {
+    flex: 1;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-right: 10px;
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
-  .create-todo-form button[type="submit"] {
+  
+  create-todo-form button[type="submit"] {
     padding: 10px;
-    background-color: #4caf50;
+    background-color: #008080;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   
   .create-todo-form button[type="submit"]:hover {
-    background-color: #357a38;
-}
+    background-color: #006666;
+  }
+
+  .todo-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .todo-item input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .todo-item .todo-text {
+    flex: 1;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .todo-item .delete-button {
+    padding: 5px;
+    background-color: #ff4d4d;
+    color: #882f2f;
+    border: none;
+  }
 
 /* Add some animation */
 @keyframes fadeIn {
